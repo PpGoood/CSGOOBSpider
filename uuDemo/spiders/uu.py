@@ -41,7 +41,7 @@ class UuSpider(scrapy.Spider):
                 yield scrapy.Request(url=csgoitem['ob_url'], callback=self.parse_csobdata, meta={'item': csgoitem})
                 # yield scrapy.Request(url=csgoitem['uu_url'], callback=self.parse_csuudata, meta={'item': csgoitem})
 
-     
+
     def check_file(self, csgoitem):
         folder_path = r'G:\Desktop\python项目\uuDemo\dataExcel'  # 修改为你的文件夹路径
         # 构建文件名，将特殊字符替换为下划线
@@ -61,14 +61,19 @@ class UuSpider(scrapy.Spider):
         # if os.path.exists(file_path2):
         #     isNeed2 = self.process_file(file_path2,csgoitem)
         # return isNeed1 or isNeed2
-        if not os.path.exists(file_path1):
-            return True
-        else:
-            return self.process_file(file_path1,csgoitem)
-        # if not os.path.exists(file_path2):
-        #     return True
-        # else:
-        #     return self.process_file(file_path2,csgoitem)
+        startRule = "1"
+        if startRule == "1":
+            if not os.path.exists(file_path1):
+                return True
+            else:
+                return self.process_file(file_path1, csgoitem)
+        elif startRule == "2":
+            if not os.path.exists(file_path2):
+                return True
+            else:
+                return self.process_file(file_path2, csgoitem)
+
+
 
 
 
