@@ -5,8 +5,8 @@ import pandas as pd
 # 文件夹路径
 folder_path = r'G:\Desktop\python项目\uuDemo\dataExcel'  # 修改为你的文件夹路径
 output_file = r'G:\Desktop\python项目\uuDemo\csgo_uu求购利润率.xlsx'  # 修改为你的输出文件路径
-target_string1 = "悠悠有品近1个月"
-target_string2 = "Buff近1个月"
+target_string1 = "悠悠有品近6个月"
+target_string2 = "BUFF近6个月"
 count = 0
 pattern = r'\(\d+\)\.xlsx$'
 

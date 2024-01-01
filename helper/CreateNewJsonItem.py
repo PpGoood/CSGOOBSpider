@@ -72,7 +72,43 @@ while True:
             }
             commodities.append(item_template)
         else:
-            print("无效的数字索引。")
+            #原封不动创建
+            # 创建指定的商品项
+            item_template = {
+                "stickersIsSort": False,
+                "subsidyPurchase": 0,
+                "stickers": {},
+                "label": None,
+                "minLeaseDeposit": None,
+                "Id": 43790,
+                "IsFavorite": None,
+                "GameId": "补充",
+                "GameName": "CS:GO",
+                "GameIcon": "https://youpin.img898.com/logo/csgo.png",
+                "CommodityName": commodity_name,
+                "CommodityHashName": "AK-47 | Jungle Spray (Field-Tested)",
+                "IconUrl": "https://youpin.img898.com/economy/image/90da136a60aa11ec86c8dca9049909c3",
+                "IconUrlLarge": "https://youpin.img898.com/economy/image/3b0a6d16614711ecb073acde48001122",
+                "OnSaleCount": 133,
+                "OnLeaseCount": 38,
+                "LeaseUnitPrice": "0.1",
+                "LongLeaseUnitPrice": "0.12",
+                "LeaseDeposit": "60",
+                "Price": "54.5",
+                "SteamPrice": "54.6",
+                "SteamUSDPrice": "6.72",
+                "TypeName": "步枪",
+                "Exterior": "破损不堪",
+                "ExteriorColor": "F0AD4E",
+                "Rarity": "工业级",
+                "RarityColor": "5E98D9",
+                "Quality": "普通",
+                "QualityColor": "B2B2B2",
+                "SortId": 43790,
+                "HaveLease": 1,
+                "Rent": "0.1"
+            }
+            commodities.append(item_template)
     else:
         # 用户没有输入数字索引，创建所有商品项
         for suffix in suffixes:

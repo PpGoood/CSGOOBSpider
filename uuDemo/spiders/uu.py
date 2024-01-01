@@ -15,7 +15,7 @@ from utils import create_chrome_driver, add_cookies
 from datetime import datetime, timedelta
 class UuSpider(scrapy.Spider):
     name = "uu"
-    allowed_domains = ["www.csgoob.com"]
+    allowed_domains = ["http://csgoob.onet4p.net/"]
 
     def __init__(self, *args, **kwargs):
         self.driver = create_chrome_driver()
@@ -25,13 +25,14 @@ class UuSpider(scrapy.Spider):
         dispatcher.connect(self.close_driver, signals.spider_closed)
 
     def start_requests(self):
+
         time.sleep(1)
         file_path = r'G:\Desktop\python项目\uuDemo\merged.json'
         cur_count = 0
 
         with open(file_path, 'r', encoding='utf-8') as file:
             data = json.load(file)
-
+        
         #获取data长度 计数来显示进度
         for index, data_one in enumerate(data):
             cur_count = cur_count + 1
@@ -45,8 +46,8 @@ class UuSpider(scrapy.Spider):
     def check_file(self, csgoitem):
         folder_path = r'G:\Desktop\python项目\uuDemo\dataExcel'  # 修改为你的文件夹路径
         # 构建文件名，将特殊字符替换为下划线
-        file_name1 = '【' + csgoitem['name'].replace(' | ', ' _ ') + '】悠悠有品近1个月-总览.xlsx'
-        file_name2 = '【' + csgoitem['name'].replace(' | ', ' _ ') + '】Buff近1个月-总览.xlsx'
+        file_name1 = '【' + csgoitem['name'].replace(' | ', ' _ ') + '】悠悠有品近6个月-总览.xlsx'
+        file_name2 = '【' + csgoitem['name'].replace(' | ', ' _ ') + '】Buff近6个月-总览.xlsx'
         # 拼接文件的完整路径
         file_path1 = os.path.join(folder_path, file_name1)
         file_path2 = os.path.join(folder_path, file_name2)

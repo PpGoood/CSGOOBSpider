@@ -88,7 +88,7 @@ class UudemoDownloaderMiddleware:
 
             time.sleep(7)
             #下载buff数据
-            download_btn = chrome_driver.find_element(By.CSS_SELECTOR, 'body > div.w-full.min-h-full.bg-light.text-black-85.dark\:text-light.dark\:bg-dark > div.w-full.h-full.mt-16.pt-6 > div > div.w-full.lg\:w-2\/3.px-2 > div:nth-child(1) > div.flex.flex-col > div.dark\:shadow-none.card-shadow.relative.bg-white.dark\:bg-dark-light.rounded-2xl.mb-6.w-full.flex-1.relative.overflow-hidden > div.w-watermark-wrapper.w-full.h-full.relative.flex.flex-col > div.absolute.left-4.top-1.flex.space-x-2.items-center > span:nth-child(3) > svg')
+            download_btn = chrome_driver.find_element(By.CSS_SELECTOR, "body > div.w-full.min-h-full.bg-light.text-black-85.dark\\:text-light.dark\\:bg-dark > div.w-full.h-full.pt-6.mt-24 > div > div.w-full.lg\\:w-2\\/3.px-2 > div > div.flex.flex-col > div.dark\\:shadow-none.card-shadow.relative.bg-white.dark\\:bg-dark-light.rounded-2xl.mb-4.w-full.flex-1.relative.overflow-hidden > div.w-watermark-wrapper.w-full.h-full.relative.flex.flex-col > div.absolute.left-4.top-1.flex.space-x-2.items-center > span:nth-child(4)")
             download_btn.click()
             time.sleep(0.5)
             # #下载uu有品求购数据
